@@ -209,8 +209,7 @@
 				ACD5FF5B2919832100384D90 /* CountryService.swift */,
 				ACD5FF5D2919848300384D90 /* ServiceConstants.swift */,
 			);
-			name = Services;
-			path = ../Services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		20F420D62915B60D00FFFA0A /* Helper */ = {
