@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Countries
+
+  Created by Faik on 5.11.2022.
+ */
+
+"Countries_Home_Page"="COUNTRIES";
+"Countries_Tab_View"="Countries";
+"Favorites_Tab_View"="Favorites";
+"Favorites_Page"="FAVORITES";
+"Go_Back"="Go Back";
+"Country_Code: %@"="Country Code: %@";
+"For_More_Information"="For More Information";
+"Service_Error_Title"="Service Error";
+"Service_Error_Body"="Unable access to Server";
+"OK"="OK";

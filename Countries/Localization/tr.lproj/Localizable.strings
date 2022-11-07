@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Countries
+
+  Created by Faik on 5.11.2022.
+*/
+
+"Countries_Home_Page"="ÜLKELER";
+"Countries_Tab_View"="Ülkeler";
+"Favorites_Tab_View"="Favoriler";
+"Favorites_Page"="FAVORİLER";
+"Go_Back"="Geri Dön";
+"Country_Code: %@"="Ülke Kodu: %@";
+"For_More_Information"="Daha Fazla Ayrıntı";
+"Service_Error_Title"="Servis Hatası";
+"Service_Error_Body"="Servise Erişilemiyor";
+"OK"="Tamam";
