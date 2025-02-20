@@ -94,7 +94,7 @@
 				20F4207D2914CA7000FFFA0A /* ContentView.swift */,
 				20F420842914CA7300FFFA0A /* Info.plist */,
 				20F420812914CA7300FFFA0A /* Preview Content */,
-				20F4208B2914CAAD00FFFA0A /* Core */,
+				20F4208B2914CAAD00FFFA0A /* Screens */,
 				20F420962914CBC000FFFA0A /* Network Layer */,
 				AF93AAC42D67903500AA3B6A /* Extensions */,
 				20F420D62915B60D00FFFA0A /* Helper */,
@@ -112,14 +112,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		20F4208B2914CAAD00FFFA0A /* Core */ = {
+		20F4208B2914CAAD00FFFA0A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				20F4208E2914CB2300FFFA0A /* HomeScreen */,
 				20F4208D2914CB0B00FFFA0A /* FavoriteScreen */,
 				20F4208C2914CAF700FFFA0A /* DetailScreen */,
 			);
-			path = Core;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		20F4208C2914CAF700FFFA0A /* DetailScreen */ = {
