@@ -22,15 +22,3 @@ enum ServiceContants: String {
     case apiHTTPField = "X-RapidAPI-Key"
     case apiKey = "8005e37890msh021268022d63ecap1ecb18jsna3dbde7e3f72"
 }
-
-//class NetworkHelper {
-//    static let shared = NetworkHelper()
-//    
-//    let baseUrl = "https://jsonplaceholder.typicode.com/"
-//    
-//    let header = ["Auth": "Bearer"]
-//    
-//    func saveToken(token: String) {
-//        
-//    }
-//}
