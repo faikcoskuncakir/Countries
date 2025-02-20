@@ -8,7 +8,7 @@
 import Foundation
 
 struct CountryModel: Codable { // JSON model of a specific country
-    let country: DataStruct
+    var country: DataStruct
 
     enum CodingKeys: String, CodingKey {
         case country = "data"
@@ -16,11 +16,11 @@ struct CountryModel: Codable { // JSON model of a specific country
 }
 
 struct DataStruct: Codable {
-    let code: String
-    let flagImageURI: String
-    let name: String
-    let wikiDataID: String
-
+    var code: String = ""
+    var flagImageURI: String = ""
+    var name: String = ""
+    var wikiDataID: String = ""
+ 
     enum CodingKeys: String, CodingKey {
         case code, name
         case flagImageURI = "flagImageUri"

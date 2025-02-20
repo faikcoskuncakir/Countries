@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     
-    var countryService = CountryService()
+    var countryDetailManager = CountryDetailManager()
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var country: Country
     @State var countryDetail: DataStruct = DataStruct(code: "", flagImageURI: "", name: "", wikiDataID: "")
@@ -27,8 +27,8 @@ struct DetailView: View {
         .navigationBarTitle(countryDetail.name, displayMode: .inline)
         .navigationBarItems(leading: BackButton(), trailing: StarButton(country: country))
         .onAppear() {
-            countryService.getCountryDetail(code: country.code) { detail in
-                countryDetail = detail.country
+            countryDetailManager.getCountryDetail(countryCode: country.code) { detail, error  in
+                countryDetail = detail?.country ?? DataStruct()
             }
         }
     }
