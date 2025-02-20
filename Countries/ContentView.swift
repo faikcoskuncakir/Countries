@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     @StateObject var favoriteListHelper: FavoriteListHelper = FavoriteListHelper()
-    @StateObject var countriesService: CountriesService = CountriesService()
+    @StateObject var countriesManager: CountriesManager = CountriesManager()
 
     init() {
         if #available(iOS 15.0, *) {
@@ -39,7 +39,7 @@ struct ContentView: View {
             }
         }
         .environmentObject(favoriteListHelper)
-        .environmentObject(countriesService)
+        .environmentObject(countriesManager)
 
     }
 }

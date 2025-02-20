@@ -9,13 +9,13 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @EnvironmentObject var countriesService: CountriesService
+    @EnvironmentObject var countriesManager: CountriesManager
     
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVStack {
-                    ForEach(countriesService.countryList) { country in
+                    ForEach(countriesManager.countryList) { country in
                         NavigationLink(
                             destination: DetailView(country: country),
                             label: {
@@ -25,7 +25,7 @@ struct HomeView: View {
                     }
                 }
                 .padding(.top)
-                .alert("Service_Error_Title", isPresented: ($countriesService.showAlert)) {
+                .alert("Service_Error_Title", isPresented: ($countriesManager.showAlert)) {
                     Button("OK", role: .cancel) { }
                     // permissionHelper.getDeviceAccessNeededAlert()
                 } message: {
