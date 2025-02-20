@@ -28,6 +28,12 @@
 		AF93AABF2D675A8300AA3B6A /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AABE2D675A8300AA3B6A /* Endpoints.swift */; };
 		AF93AAC12D675AB000AA3B6A /* CountriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAC02D675AB000AA3B6A /* CountriesManager.swift */; };
 		AF93AAC32D675C7100AA3B6A /* CountryDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAC22D675C7100AA3B6A /* CountryDetailManager.swift */; };
+		AF93AACA2D67926200AA3B6A /* HomeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAC92D67926200AA3B6A /* HomeLineView.swift */; };
+		AF93AACC2D6792F600AA3B6A /* FavoriteLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AACB2D6792F600AA3B6A /* FavoriteLineView.swift */; };
+		AF93AACE2D67935800AA3B6A /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AACD2D67935800AA3B6A /* BackButton.swift */; };
+		AF93AAD02D67938C00AA3B6A /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AACF2D67938C00AA3B6A /* StarButton.swift */; };
+		AF93AAD22D6793DC00AA3B6A /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAD12D6793DC00AA3B6A /* PictureView.swift */; };
+		AF93AAD42D6793F900AA3B6A /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAD32D6793F900AA3B6A /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +62,12 @@
 		AF93AABE2D675A8300AA3B6A /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		AF93AAC02D675AB000AA3B6A /* CountriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesManager.swift; sourceTree = "<group>"; };
 		AF93AAC22D675C7100AA3B6A /* CountryDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailManager.swift; sourceTree = "<group>"; };
+		AF93AAC92D67926200AA3B6A /* HomeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLineView.swift; sourceTree = "<group>"; };
+		AF93AACB2D6792F600AA3B6A /* FavoriteLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLineView.swift; sourceTree = "<group>"; };
+		AF93AACD2D67935800AA3B6A /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		AF93AACF2D67938C00AA3B6A /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
+		AF93AAD12D6793DC00AA3B6A /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		AF93AAD32D6793F900AA3B6A /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,7 @@
 				20F420842914CA7300FFFA0A /* Info.plist */,
 				20F420812914CA7300FFFA0A /* Preview Content */,
 				20F4208B2914CAAD00FFFA0A /* Screens */,
+				AF93AAC82D67921000AA3B6A /* UIComponents */,
 				20F420962914CBC000FFFA0A /* Network Layer */,
 				AF93AAC42D67903500AA3B6A /* Extensions */,
 				20F420D62915B60D00FFFA0A /* Helper */,
@@ -267,6 +280,19 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AF93AAC82D67921000AA3B6A /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				AF93AAC92D67926200AA3B6A /* HomeLineView.swift */,
+				AF93AACB2D6792F600AA3B6A /* FavoriteLineView.swift */,
+				AF93AACD2D67935800AA3B6A /* BackButton.swift */,
+				AF93AACF2D67938C00AA3B6A /* StarButton.swift */,
+				AF93AAD12D6793DC00AA3B6A /* PictureView.swift */,
+				AF93AAD32D6793F900AA3B6A /* TextView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,13 +364,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF93AACC2D6792F600AA3B6A /* FavoriteLineView.swift in Sources */,
 				AF93AAC12D675AB000AA3B6A /* CountriesManager.swift in Sources */,
 				20F420982914CC1F00FFFA0A /* HomeView.swift in Sources */,
 				20F420B42914F94B00FFFA0A /* CountryModel.swift in Sources */,
 				20AECB3F291903A0005E8FBB /* String+Extension.swift in Sources */,
+				AF93AACE2D67935800AA3B6A /* BackButton.swift in Sources */,
 				AF93AABD2D675A4E00AA3B6A /* NetworkService.swift in Sources */,
 				20F420D82915B62B00FFFA0A /* FavoriteListHelper.swift in Sources */,
+				AF93AACA2D67926200AA3B6A /* HomeLineView.swift in Sources */,
+				AF93AAD42D6793F900AA3B6A /* TextView.swift in Sources */,
 				20F420A72914CC7B00FFFA0A /* DetailView.swift in Sources */,
+				AF93AAD22D6793DC00AA3B6A /* PictureView.swift in Sources */,
 				20F4207E2914CA7000FFFA0A /* ContentView.swift in Sources */,
 				20F420AE2914CD9600FFFA0A /* CountriesModel.swift in Sources */,
 				AF93AAC32D675C7100AA3B6A /* CountryDetailManager.swift in Sources */,
@@ -355,6 +386,7 @@
 				AF93AABF2D675A8300AA3B6A /* Endpoints.swift in Sources */,
 				20F4209E2914CC3F00FFFA0A /* FavoriteView.swift in Sources */,
 				20F420A12914CC4E00FFFA0A /* FavoriteViewModel.swift in Sources */,
+				AF93AAD02D67938C00AA3B6A /* StarButton.swift in Sources */,
 				20F4209B2914CC2F00FFFA0A /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
