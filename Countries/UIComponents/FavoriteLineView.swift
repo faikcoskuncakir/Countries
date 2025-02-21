@@ -23,7 +23,6 @@ struct FavoriteLineView: View {
                 .font(.title)
                 .foregroundColor(.yellow)
                 .onTapGesture {
-                    
                     favoriteListHelper.removeFavorite(country: country)
                 }
         }

@@ -9,14 +9,19 @@ import SwiftUI
 
 struct FavoriteView: View {
     
+    @StateObject var viewModel: FavoriteViewModel
     @EnvironmentObject var favoriteListHelper: FavoriteListHelper
+    
+    init(favoriteListHelper: FavoriteListHelper) {
+        _viewModel = StateObject(wrappedValue: FavoriteViewModel(favoriteListHelper: favoriteListHelper))
+    }
     
     var body: some View {
         
         NavigationView {
             ScrollView {
                 LazyVStack {
-                    ForEach(favoriteListHelper.favoriteList) { country in
+                    ForEach(viewModel.favoriteCountries) { country in
                         NavigationLink(
                             destination: DetailView(country: country),
                             label: {
@@ -27,6 +32,9 @@ struct FavoriteView: View {
                 }
                 .padding(.top)
                 .navigationBarTitle("Favorites_Page", displayMode: .inline)
+            }
+            .onAppear {
+                viewModel.loadData()
             }
         }
     }

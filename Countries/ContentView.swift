@@ -31,7 +31,7 @@ struct ContentView: View {
                 Text("Countries_Tab_View")
             }
 
-            FavoriteView()
+            FavoriteView(favoriteListHelper: favoriteListHelper)
                 .tabItem {
                 Image(systemName: "heart")
                 Text("Favorites_Tab_View")
