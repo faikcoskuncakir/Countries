@@ -26,4 +26,11 @@ struct DataStruct: Codable {
         case flagImageURI = "flagImageUri"
         case wikiDataID = "wikiDataId"
     }
+    
+    init() {
+        self.code = ""
+        self.flagImageURI = ""
+        self.name = ""
+        self.wikiDataID = ""
+    }
 }

@@ -17,7 +17,7 @@ struct HomeView: View {
                 LazyVStack {
                     ForEach(homeViewModel.countries) { country in
                         NavigationLink(
-                            destination: DetailView(country: country),
+                            destination: DetailView(viewModel: DetailViewModel(country: country)),
                             label: {
                                 HomeLineView(country: country)
                             }

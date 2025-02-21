@@ -23,7 +23,7 @@ struct FavoriteView: View {
                 LazyVStack {
                     ForEach(viewModel.favoriteCountries) { country in
                         NavigationLink(
-                            destination: DetailView(country: country),
+                            destination: DetailView(viewModel: DetailViewModel(country: country)),
                             label: {
                                 FavoriteLineView(country: country)
                             }

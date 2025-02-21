@@ -25,6 +25,14 @@ struct Country: Codable, Identifiable, Equatable {
     static func ==(lhs: Country, rhs: Country) -> Bool {
         return lhs.code == rhs.code
     }
+    
+    init() {
+        self.code = ""
+        self.currencyCodes = []
+        self.name = ""
+        self.wikiDataID = ""
+        self.id = UUID()
+    }
 }
 
 

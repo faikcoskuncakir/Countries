@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class HomeViewModel: ObservableObject {
     @Published var countries: [Country] = []
     @Published var showAlert: Bool = false
