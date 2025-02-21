@@ -7,17 +7,12 @@
 
 import Foundation
 
-class CountriesManager: ObservableObject {
-    
-    @Published var countryList: [Country] = []
-    @Published var showAlert: Bool = false
-    
-    init() {
-        getAllCountries()
-    }
-    
-    /// Retrieves all countries from the endpoint and sets it to countryList environment variable
-    func getAllCountries() {
+protocol CountriesManagerProtocol {
+    func getAllCountries(completionHandler: @escaping ([Country]?, String?) -> Void)
+}
+
+class CountriesManager: CountriesManagerProtocol {
+    func getAllCountries(completionHandler: @escaping ([Country]?, String?) -> Void) {
         let url = Endpoints.countries.urlString
         
         let queryItems = [
@@ -28,9 +23,9 @@ class CountriesManager: ObservableObject {
             DispatchQueue.main.async {
                 switch response {
                 case .success(let countriesModel):
-                    self.countryList = countriesModel.data
-                case .failure:
-                    self.showAlert = true
+                    completionHandler(countriesModel.data, nil)
+                case .failure(let error):
+                    completionHandler(nil, error.rawValue)
                 }
             }
         }
