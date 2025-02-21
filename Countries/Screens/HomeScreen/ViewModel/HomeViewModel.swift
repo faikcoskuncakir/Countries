@@ -16,6 +16,7 @@ class HomeViewModel: ObservableObject {
     
     init(countriesManager: CountriesManager = CountriesManager()) {
         self.countriesManager = countriesManager
+        fetchCountries()
     }
     
     func fetchCountries() {

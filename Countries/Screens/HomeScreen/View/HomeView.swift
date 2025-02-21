@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @EnvironmentObject var homeViewModel: HomeViewModel
+    @StateObject private var homeViewModel = HomeViewModel()
     
     var body: some View {
         NavigationView {
@@ -33,11 +33,7 @@ struct HomeView: View {
                 }
             }
             .navigationBarTitle("Countries_Home_Page", displayMode: .inline)
-            .onAppear{
-                homeViewModel.fetchCountries()
-            }
         }
-        
     }
 }
 
