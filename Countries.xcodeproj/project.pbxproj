@@ -42,6 +42,7 @@
 		AFFEC86B2D6A26EC004824FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86A2D6A26EC004824FD /* ProfileView.swift */; };
 		AFFEC86D2D6A272C004824FD /* ProfileInfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86C2D6A272C004824FD /* ProfileInfoRowView.swift */; };
 		AFFEC86F2D6A276B004824FD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86E2D6A276B004824FD /* LocationManager.swift */; };
+		AFFEC8712D6A3E90004824FD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC8702D6A3E90004824FD /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		AFFEC86A2D6A26EC004824FD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AFFEC86C2D6A272C004824FD /* ProfileInfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoRowView.swift; sourceTree = "<group>"; };
 		AFFEC86E2D6A276B004824FD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		AFFEC8702D6A3E90004824FD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +363,7 @@
 		AFFEC8682D6A26CC004824FD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AFFEC8702D6A3E90004824FD /* ProfileViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				AF93AAD22D6793DC00AA3B6A /* PictureView.swift in Sources */,
 				20F4207E2914CA7000FFFA0A /* ContentView.swift in Sources */,
 				20F420AE2914CD9600FFFA0A /* CountriesModel.swift in Sources */,
+				AFFEC8712D6A3E90004824FD /* ProfileViewModel.swift in Sources */,
 				AF93AAC32D675C7100AA3B6A /* CountryDetailManager.swift in Sources */,
 				20F420A42914CC6F00FFFA0A /* DetailViewModel.swift in Sources */,
 				AF93AABB2D675A2C00AA3B6A /* NetworkHelper.swift in Sources */,
