@@ -38,6 +38,7 @@
 		AF93AADD2D69D8AE00AA3B6A /* FavoriteLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AADC2D69D8AE00AA3B6A /* FavoriteLineViewModel.swift */; };
 		AF93AAE02D69DFAA00AA3B6A /* StarButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AADF2D69DFAA00AA3B6A /* StarButtonViewModel.swift */; };
 		AF93AAE32D69E18400AA3B6A /* TextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */; };
+		AF93AAE52D6A0C7100AA3B6A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAE42D6A0C7100AA3B6A /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		AF93AADC2D69D8AE00AA3B6A /* FavoriteLineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLineViewModel.swift; sourceTree = "<group>"; };
 		AF93AADF2D69DFAA00AA3B6A /* StarButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButtonViewModel.swift; sourceTree = "<group>"; };
 		AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModel.swift; sourceTree = "<group>"; };
+		AF93AAE42D6A0C7100AA3B6A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				20F4208E2914CB2300FFFA0A /* HomeScreen */,
 				20F4208D2914CB0B00FFFA0A /* FavoriteScreen */,
 				20F4208C2914CAF700FFFA0A /* DetailScreen */,
+				AF93AAE42D6A0C7100AA3B6A /* WebView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				AF93AAC32D675C7100AA3B6A /* CountryDetailManager.swift in Sources */,
 				20F420A42914CC6F00FFFA0A /* DetailViewModel.swift in Sources */,
 				AF93AABB2D675A2C00AA3B6A /* NetworkHelper.swift in Sources */,
+				AF93AAE52D6A0C7100AA3B6A /* WebView.swift in Sources */,
 				20F4207C2914CA7000FFFA0A /* CountriesApp.swift in Sources */,
 				20F420DD2916476E00FFFA0A /* FavoriteListStorage.swift in Sources */,
 				AF93AABF2D675A8300AA3B6A /* Endpoints.swift in Sources */,

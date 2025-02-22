@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TextView: View {
-    @Environment(\.openURL) var openURL
     @ObservedObject var viewModel: TextViewModel
+    @State private var showWebView = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -28,11 +28,13 @@ struct TextView: View {
             .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 9)
             .background(Color.blue)
             .onTapGesture {
-                if let url = viewModel.getWikiURL() {
-                    openURL(url)
-                }
+                showWebView = true
             }
+        }
+        .sheet(isPresented: $showWebView) {
+            WebView(url: viewModel.getWikiURL()!)
         }
     }
 }
+
 
