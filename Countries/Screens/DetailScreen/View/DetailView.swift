@@ -20,7 +20,7 @@ struct DetailView: View {
     var body: some View {
         VStack(alignment: .leading) {
             PictureView(image: viewModel.countryDetail.flagImageURI.image(code: viewModel.countryDetail.code))
-            TextView(countryDetail: viewModel.countryDetail)
+            TextView(viewModel: TextViewModel(countryDetail: viewModel.countryDetail))
             Spacer()
         }
         .padding(.top)

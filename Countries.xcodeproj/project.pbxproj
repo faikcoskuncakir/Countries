@@ -37,6 +37,7 @@
 		AF93AAD92D69CA0500AA3B6A /* HomeLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAD82D69CA0500AA3B6A /* HomeLineViewModel.swift */; };
 		AF93AADD2D69D8AE00AA3B6A /* FavoriteLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AADC2D69D8AE00AA3B6A /* FavoriteLineViewModel.swift */; };
 		AF93AAE02D69DFAA00AA3B6A /* StarButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AADF2D69DFAA00AA3B6A /* StarButtonViewModel.swift */; };
+		AF93AAE32D69E18400AA3B6A /* TextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		AF93AAD82D69CA0500AA3B6A /* HomeLineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLineViewModel.swift; sourceTree = "<group>"; };
 		AF93AADC2D69D8AE00AA3B6A /* FavoriteLineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLineViewModel.swift; sourceTree = "<group>"; };
 		AF93AADF2D69DFAA00AA3B6A /* StarButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButtonViewModel.swift; sourceTree = "<group>"; };
+		AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,9 +294,9 @@
 				AF93AADA2D69D64000AA3B6A /* HomeLineView */,
 				AF93AADB2D69D88D00AA3B6A /* FavoriteLineView */,
 				AF93AADE2D69DF8F00AA3B6A /* StarButton */,
+				AF93AAE12D69E16A00AA3B6A /* TextView */,
 				AF93AACD2D67935800AA3B6A /* BackButton.swift */,
 				AF93AAD12D6793DC00AA3B6A /* PictureView.swift */,
-				AF93AAD32D6793F900AA3B6A /* TextView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -324,6 +326,15 @@
 				AF93AADF2D69DFAA00AA3B6A /* StarButtonViewModel.swift */,
 			);
 			path = StarButton;
+			sourceTree = "<group>";
+		};
+		AF93AAE12D69E16A00AA3B6A /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				AF93AAD32D6793F900AA3B6A /* TextView.swift */,
+				AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */,
+			);
+			path = TextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +435,7 @@
 				AF93AAD02D67938C00AA3B6A /* StarButton.swift in Sources */,
 				20F4209B2914CC2F00FFFA0A /* HomeViewModel.swift in Sources */,
 				AF93AAD92D69CA0500AA3B6A /* HomeLineViewModel.swift in Sources */,
+				AF93AAE32D69E18400AA3B6A /* TextViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

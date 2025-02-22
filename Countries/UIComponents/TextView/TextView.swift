@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct TextView: View {
-    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(\.openURL) var openURL
-    var countryDetail: DataStruct
-    let wikiBaseURL = "https://www.wikidata.org/wiki/"
+    @ObservedObject var viewModel: TextViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Country_Code: \(countryDetail.code)")
+            Text("Country_Code: \(viewModel.countryDetail.code)")
                 .padding(.bottom, 3)
             
             HStack {
@@ -31,9 +29,11 @@ struct TextView: View {
             .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 9)
             .background(Color.blue)
             .onTapGesture {
-                // Open the URL for wikidata with more information about the country
-                openURL(URL(string: wikiBaseURL + (countryDetail.wikiDataID))!)
+                if let url = viewModel.getWikiURL() {
+                    openURL(url)
+                }
             }
         }
     }
 }
+
