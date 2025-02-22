@@ -10,7 +10,6 @@ import SwiftUI
 struct DetailView: View {
     
     @EnvironmentObject var favoriteListHelper: FavoriteListHelper
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject private var viewModel: DetailViewModel // @ObservedObject yerine @StateObject kullan
 
     init(viewModel: DetailViewModel) {

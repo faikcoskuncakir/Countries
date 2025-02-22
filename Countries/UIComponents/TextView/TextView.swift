@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TextView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(\.openURL) var openURL
     @ObservedObject var viewModel: TextViewModel
     
