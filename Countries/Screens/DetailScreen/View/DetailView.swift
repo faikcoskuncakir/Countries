@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     
+    @EnvironmentObject var favoriteListHelper: FavoriteListHelper
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject private var viewModel: DetailViewModel // @ObservedObject yerine @StateObject kullan
 
@@ -25,7 +26,7 @@ struct DetailView: View {
         .padding(.top)
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle(viewModel.countryDetail.name, displayMode: .inline)
-        .navigationBarItems(leading: BackButton(), trailing: StarButton(country: viewModel.country))
+        .navigationBarItems(leading: BackButton(), trailing: StarButton(viewModel: StarButtonViewModel(country: viewModel.country, favoriteListHelper: favoriteListHelper)))
         .onAppear {
             viewModel.fetchCountryDetail()
         }
