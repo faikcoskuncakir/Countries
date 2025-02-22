@@ -25,7 +25,7 @@ struct FavoriteView: View {
                         NavigationLink(
                             destination: DetailView(viewModel: DetailViewModel(country: country)),
                             label: {
-                                FavoriteLineView(country: country)
+                                FavoriteLineView(country: country, favoriteListHelper: favoriteListHelper)
                             }
                         )
                     }

@@ -9,21 +9,23 @@ import SwiftUI
 
 struct FavoriteLineView: View {
     
-    @State var country: Country
+    @ObservedObject var viewModel: FavoriteLineViewModel
     @EnvironmentObject var favoriteListHelper: FavoriteListHelper
-    var favoriteListStorage = FavoriteListStorage()
     
+    init(country: Country, favoriteListHelper: FavoriteListHelper) {
+        _viewModel = ObservedObject(wrappedValue: FavoriteLineViewModel(country: country, favoriteListHelper: favoriteListHelper))
+    }
+
     var body: some View {
-        
         HStack {
-            Text(country.name)
+            Text(viewModel.country.name)
                 .foregroundColor(.black)
             Spacer()
             Image(systemName: "star.fill")
                 .font(.title)
                 .foregroundColor(.yellow)
                 .onTapGesture {
-                    favoriteListHelper.removeFavorite(country: country)
+                    viewModel.removeFavorite()
                 }
         }
         .padding()
@@ -31,5 +33,4 @@ struct FavoriteLineView: View {
         .background(Color.gray)
         .cornerRadius(20)
     }
-    
 }
