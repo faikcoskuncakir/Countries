@@ -10,12 +10,12 @@ import SwiftUI
 struct DetailView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @ObservedObject private var viewModel: DetailViewModel
-    
+    @StateObject private var viewModel: DetailViewModel // @ObservedObject yerine @StateObject kullan
+
     init(viewModel: DetailViewModel) {
-        self.viewModel = viewModel
+        _viewModel = StateObject(wrappedValue: viewModel) // Burada @StateObject olarak başlatıyoruz
     }
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             PictureView(image: viewModel.countryDetail.flagImageURI.image(code: viewModel.countryDetail.code))
@@ -26,7 +26,7 @@ struct DetailView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle(viewModel.countryDetail.name, displayMode: .inline)
         .navigationBarItems(leading: BackButton(), trailing: StarButton(country: viewModel.country))
-        .onAppear() {
+        .onAppear {
             viewModel.fetchCountryDetail()
         }
     }

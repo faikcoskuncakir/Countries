@@ -34,6 +34,7 @@
 		AF93AAD02D67938C00AA3B6A /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AACF2D67938C00AA3B6A /* StarButton.swift */; };
 		AF93AAD22D6793DC00AA3B6A /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAD12D6793DC00AA3B6A /* PictureView.swift */; };
 		AF93AAD42D6793F900AA3B6A /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAD32D6793F900AA3B6A /* TextView.swift */; };
+		AF93AAD92D69CA0500AA3B6A /* HomeLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAD82D69CA0500AA3B6A /* HomeLineViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		AF93AACF2D67938C00AA3B6A /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
 		AF93AAD12D6793DC00AA3B6A /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 		AF93AAD32D6793F900AA3B6A /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		AF93AAD82D69CA0500AA3B6A /* HomeLineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,7 +285,7 @@
 		AF93AAC82D67921000AA3B6A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				AF93AAC92D67926200AA3B6A /* HomeLineView.swift */,
+				AF93AADA2D69D64000AA3B6A /* HomeLineView */,
 				AF93AACB2D6792F600AA3B6A /* FavoriteLineView.swift */,
 				AF93AACD2D67935800AA3B6A /* BackButton.swift */,
 				AF93AACF2D67938C00AA3B6A /* StarButton.swift */,
@@ -291,6 +293,15 @@
 				AF93AAD32D6793F900AA3B6A /* TextView.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		AF93AADA2D69D64000AA3B6A /* HomeLineView */ = {
+			isa = PBXGroup;
+			children = (
+				AF93AAC92D67926200AA3B6A /* HomeLineView.swift */,
+				AF93AAD82D69CA0500AA3B6A /* HomeLineViewModel.swift */,
+			);
+			path = HomeLineView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +399,7 @@
 				20F420A12914CC4E00FFFA0A /* FavoriteViewModel.swift in Sources */,
 				AF93AAD02D67938C00AA3B6A /* StarButton.swift in Sources */,
 				20F4209B2914CC2F00FFFA0A /* HomeViewModel.swift in Sources */,
+				AF93AAD92D69CA0500AA3B6A /* HomeLineViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

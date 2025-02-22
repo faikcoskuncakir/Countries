@@ -39,4 +39,3 @@ struct FavoriteView: View {
         }
     }
 }
-

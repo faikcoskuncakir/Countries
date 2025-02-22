@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject private var homeViewModel = HomeViewModel()
+    @EnvironmentObject var favoriteListHelper: FavoriteListHelper
     
     var body: some View {
         NavigationView {
@@ -19,7 +20,7 @@ struct HomeView: View {
                         NavigationLink(
                             destination: DetailView(viewModel: DetailViewModel(country: country)),
                             label: {
-                                HomeLineView(country: country)
+                                HomeLineView(country: country, favoriteListHelper: favoriteListHelper)
                             }
                         )
                     }
@@ -36,4 +37,3 @@ struct HomeView: View {
         }
     }
 }
-

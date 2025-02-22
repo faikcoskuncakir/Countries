@@ -9,25 +9,25 @@ import SwiftUI
 
 struct HomeLineView: View {
     
+    @ObservedObject var viewModel: HomeLineViewModel
     @EnvironmentObject var favoriteListHelper: FavoriteListHelper
-    var country: Country
+    
+    init(country: Country, favoriteListHelper: FavoriteListHelper) {
+        _viewModel = ObservedObject(wrappedValue: HomeLineViewModel(country: country, favoriteListHelper: favoriteListHelper))
+    }
     
     var body: some View {
         
         HStack {
-            Text(country.name)
+            Text(viewModel.country.name)
                 .foregroundColor(.black)
             Spacer()
             Image(systemName: "star.fill")
                 .font(.title)
                 .padding(.trailing, 2)
-                .foregroundColor(favoriteListHelper.isFavorite(country: country) ? .yellow : .black)
+                .foregroundColor(viewModel.isFavorite ? .yellow : .black)
                 .onTapGesture {
-                    if favoriteListHelper.isFavorite(country: country) {
-                        favoriteListHelper.removeFavorite(country: country)
-                    } else {
-                        favoriteListHelper.addFavorite(country: country)
-                    }
+                    viewModel.toggleFavorite()
                 }
         }
         .padding()
