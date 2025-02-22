@@ -39,6 +39,9 @@
 		AF93AAE02D69DFAA00AA3B6A /* StarButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AADF2D69DFAA00AA3B6A /* StarButtonViewModel.swift */; };
 		AF93AAE32D69E18400AA3B6A /* TextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */; };
 		AF93AAE52D6A0C7100AA3B6A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAE42D6A0C7100AA3B6A /* WebView.swift */; };
+		AFFEC86B2D6A26EC004824FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86A2D6A26EC004824FD /* ProfileView.swift */; };
+		AFFEC86D2D6A272C004824FD /* ProfileInfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86C2D6A272C004824FD /* ProfileInfoRowView.swift */; };
+		AFFEC86F2D6A276B004824FD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86E2D6A276B004824FD /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,9 @@
 		AF93AADF2D69DFAA00AA3B6A /* StarButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButtonViewModel.swift; sourceTree = "<group>"; };
 		AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModel.swift; sourceTree = "<group>"; };
 		AF93AAE42D6A0C7100AA3B6A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		AFFEC86A2D6A26EC004824FD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AFFEC86C2D6A272C004824FD /* ProfileInfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoRowView.swift; sourceTree = "<group>"; };
+		AFFEC86E2D6A276B004824FD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,7 @@
 				20F4208E2914CB2300FFFA0A /* HomeScreen */,
 				20F4208D2914CB0B00FFFA0A /* FavoriteScreen */,
 				20F4208C2914CAF700FFFA0A /* DetailScreen */,
+				AFFEC8672D6A26A4004824FD /* ProfileScreen */,
 				AF93AAE42D6A0C7100AA3B6A /* WebView.swift */,
 			);
 			path = Screens;
@@ -244,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				20F420D72915B62B00FFFA0A /* FavoriteListHelper.swift */,
+				AFFEC86E2D6A276B004824FD /* LocationManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -300,6 +308,7 @@
 				AF93AAE12D69E16A00AA3B6A /* TextView */,
 				AF93AACD2D67935800AA3B6A /* BackButton.swift */,
 				AF93AAD12D6793DC00AA3B6A /* PictureView.swift */,
+				AFFEC86C2D6A272C004824FD /* ProfileInfoRowView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -338,6 +347,30 @@
 				AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */,
 			);
 			path = TextView;
+			sourceTree = "<group>";
+		};
+		AFFEC8672D6A26A4004824FD /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AFFEC8682D6A26CC004824FD /* ViewModel */,
+				AFFEC8692D6A26D7004824FD /* View */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		AFFEC8682D6A26CC004824FD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFFEC8692D6A26D7004824FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFFEC86A2D6A26EC004824FD /* ProfileView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,7 +448,9 @@
 				AF93AAC12D675AB000AA3B6A /* CountriesManager.swift in Sources */,
 				20F420982914CC1F00FFFA0A /* HomeView.swift in Sources */,
 				20F420B42914F94B00FFFA0A /* CountryModel.swift in Sources */,
+				AFFEC86F2D6A276B004824FD /* LocationManager.swift in Sources */,
 				20AECB3F291903A0005E8FBB /* String+Extension.swift in Sources */,
+				AFFEC86D2D6A272C004824FD /* ProfileInfoRowView.swift in Sources */,
 				AF93AACE2D67935800AA3B6A /* BackButton.swift in Sources */,
 				AF93AABD2D675A4E00AA3B6A /* NetworkService.swift in Sources */,
 				20F420D82915B62B00FFFA0A /* FavoriteListHelper.swift in Sources */,
@@ -433,6 +468,7 @@
 				AF93AAE52D6A0C7100AA3B6A /* WebView.swift in Sources */,
 				20F4207C2914CA7000FFFA0A /* CountriesApp.swift in Sources */,
 				20F420DD2916476E00FFFA0A /* FavoriteListStorage.swift in Sources */,
+				AFFEC86B2D6A26EC004824FD /* ProfileView.swift in Sources */,
 				AF93AABF2D675A8300AA3B6A /* Endpoints.swift in Sources */,
 				20F4209E2914CC3F00FFFA0A /* FavoriteView.swift in Sources */,
 				20F420A12914CC4E00FFFA0A /* FavoriteViewModel.swift in Sources */,

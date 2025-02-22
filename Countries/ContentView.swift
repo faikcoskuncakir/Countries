@@ -36,9 +36,14 @@ struct ContentView: View {
                 Image(systemName: "heart")
                 Text("Favorites_Tab_View")
             }
+            
+            ProfileView()
+                .tabItem {
+                Image(systemName: "person.crop.circle.fill")
+                Text("Profiles_Tab_View")
+            }
         }
         .environmentObject(favoriteListHelper)
 
     }
 }
-
