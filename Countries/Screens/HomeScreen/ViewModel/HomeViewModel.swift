@@ -13,7 +13,7 @@ class HomeViewModel: ObservableObject {
     
     private var countriesManager: CountriesManagerProtocol
     
-    init(countriesManager: CountriesManager = CountriesManager()) {
+    init(countriesManager: CountriesManagerProtocol = CountriesManager()) {
         self.countriesManager = countriesManager
         fetchCountries()
     }
