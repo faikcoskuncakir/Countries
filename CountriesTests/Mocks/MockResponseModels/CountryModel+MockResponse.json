@@ -1,0 +1,9 @@
+{
+  "code": "US",
+  "capital": "Washington, D.C.",
+  "callingCode": "1",
+  "flagImageURI": "https://example.com/flag.png",
+  "name": "United States",
+  "wikiDataID": "Q30",
+  "currencyCodes": ["USD"]
+}
