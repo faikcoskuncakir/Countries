@@ -26,15 +26,16 @@ class HomeViewModelTests: XCTestCase {
     }
     
     func testFetchCountriesSuccess() {
-        // Test için mock data hazırlıyoruz
-        let expectedCountries = [Country(code: "US", currencyCodes: ["USD"], name: "United States", wikiDataID: "Q30")]
+        guard let jsonData = loadJSONFromFile(name: "CountriesModel+MockResponse"),
+              let expectedCountries = try? JSONDecoder().decode(CountriesModel.self, from: jsonData).data else {
+            return XCTFail("Failed to load or decode JSON")
+        }
+
         mockCountriesManager.mockCountries = expectedCountries
         mockCountriesManager.mockError = nil
-        
-        // Act
+
         viewModel.fetchCountries()
-        
-        // Assert
+
         XCTAssertEqual(viewModel.countries, expectedCountries)
         XCTAssertFalse(viewModel.showAlert)
     }

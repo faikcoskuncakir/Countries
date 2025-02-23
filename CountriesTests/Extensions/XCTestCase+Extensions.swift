@@ -1,5 +1,5 @@
 //
-//  XCTestCase+Extesnsions.swift
+//  XCTestCase+Extensions.swift
 //  CountriesTests
 //
 //  Created by Cakir, Faik on 23.02.2025.
