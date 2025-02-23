@@ -45,12 +45,12 @@ class NetworkService {
         request.setValue(ServiceContants.apiKey.rawValue, forHTTPHeaderField: ServiceContants.apiHTTPField.rawValue)
         
         let dataTask = session.dataTask(with: request) { (data, response, error) in
-            if let _ = error {
-                completion(.failure(.generalError))
+            if let error = error as? NetworkErrors {
+                completion(.failure(error))
             } else if let data = data {
                 self.handleResponse(data: data, completion: completion)
             } else {
-                completion(.failure(.invalidURL))
+                completion(.failure(.invalidData))
             }
         }
         dataTask.resume()

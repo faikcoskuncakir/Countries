@@ -73,6 +73,8 @@ class NetworkServiceTests: XCTestCase {
     
     // Test with invalid URL
     func testRequestWithInvalidURL() {
+        mockSession.error = NetworkErrors.invalidURL
+        
         let expectation = self.expectation(description: "Invalid URL response")
         
         networkService.requestWithURLSession(url: "invalid_url", method: .get) { (result: Result<CountriesModel, NetworkErrors>) in
@@ -127,4 +129,3 @@ class NetworkServiceTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
 }
-
