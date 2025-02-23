@@ -23,6 +23,7 @@
 		20F420DD2916476E00FFFA0A /* FavoriteListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F420DC2916476E00FFFA0A /* FavoriteListStorage.swift */; };
 		ACD5FF6229198AE200384D90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACD5FF6429198AE200384D90 /* Localizable.strings */; };
 		ACD5FF68291999CB00384D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD5FF67291999CB00384D90 /* Assets.xcassets */; };
+		AF46B86D2D6B6C8C00798D7E /* CountriesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF46B86C2D6B6C8C00798D7E /* CountriesManagerTests.swift */; };
 		AF93AABB2D675A2C00AA3B6A /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AABA2D675A2C00AA3B6A /* NetworkHelper.swift */; };
 		AF93AABD2D675A4E00AA3B6A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AABC2D675A4E00AA3B6A /* NetworkService.swift */; };
 		AF93AABF2D675A8300AA3B6A /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AABE2D675A8300AA3B6A /* Endpoints.swift */; };
@@ -79,6 +80,7 @@
 		ACD5FF6329198AE200384D90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACD5FF6629198C4500384D90 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACD5FF67291999CB00384D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF46B86C2D6B6C8C00798D7E /* CountriesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesManagerTests.swift; sourceTree = "<group>"; };
 		AF93AABA2D675A2C00AA3B6A /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		AF93AABC2D675A4E00AA3B6A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AF93AABE2D675A8300AA3B6A /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				AFFEC8832D6B5B13004824FD /* Mocks */,
 				AFFEC8782D6B0730004824FD /* FavoriteListStorageTests.swift */,
 				AFFEC8842D6B5B9A004824FD /* NetworkServiceTests.swift */,
+				AF46B86C2D6B6C8C00798D7E /* CountriesManagerTests.swift */,
 			);
 			path = CountriesTests;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF46B86D2D6B6C8C00798D7E /* CountriesManagerTests.swift in Sources */,
 				AFFEC8812D6B5AE9004824FD /* MockNetworkService.swift in Sources */,
 				AFFEC8852D6B5B9A004824FD /* NetworkServiceTests.swift in Sources */,
 				AFFEC8792D6B0730004824FD /* FavoriteListStorageTests.swift in Sources */,
