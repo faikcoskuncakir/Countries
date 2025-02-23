@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "code": "US",
+      "currencyCodes": ["USD"],
+      "name": "United States",
+      "wikiDataId": "Q30"
+    },
+    {
+      "code": "TR",
+      "currencyCodes": ["TRY"],
+      "name": "Turkey",
+      "wikiDataId": "Q43"
+    }
+  ]
+}
+

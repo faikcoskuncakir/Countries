@@ -26,6 +26,8 @@
 		AF46B86D2D6B6C8C00798D7E /* CountriesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF46B86C2D6B6C8C00798D7E /* CountriesManagerTests.swift */; };
 		AF46B86F2D6B6E7800798D7E /* MockCountriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF46B86E2D6B6E7800798D7E /* MockCountriesManager.swift */; };
 		AF46B8712D6B6EE000798D7E /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF46B8702D6B6EE000798D7E /* HomeViewModelTests.swift */; };
+		AF8943DD2D6B8646005D0E80 /* CountriesModel+MockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AF8943DC2D6B8646005D0E80 /* CountriesModel+MockResponse.json */; };
+		AF8943E12D6B87B5005D0E80 /* XCTestCase+Extesnsions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8943E02D6B87B5005D0E80 /* XCTestCase+Extesnsions.swift */; };
 		AF93AABB2D675A2C00AA3B6A /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AABA2D675A2C00AA3B6A /* NetworkHelper.swift */; };
 		AF93AABD2D675A4E00AA3B6A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AABC2D675A4E00AA3B6A /* NetworkService.swift */; };
 		AF93AABF2D675A8300AA3B6A /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AABE2D675A8300AA3B6A /* Endpoints.swift */; };
@@ -85,6 +87,8 @@
 		AF46B86C2D6B6C8C00798D7E /* CountriesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesManagerTests.swift; sourceTree = "<group>"; };
 		AF46B86E2D6B6E7800798D7E /* MockCountriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCountriesManager.swift; sourceTree = "<group>"; };
 		AF46B8702D6B6EE000798D7E /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		AF8943DC2D6B8646005D0E80 /* CountriesModel+MockResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "CountriesModel+MockResponse.json"; sourceTree = "<group>"; };
+		AF8943E02D6B87B5005D0E80 /* XCTestCase+Extesnsions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extesnsions.swift"; sourceTree = "<group>"; };
 		AF93AABA2D675A2C00AA3B6A /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		AF93AABC2D675A4E00AA3B6A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AF93AABE2D675A8300AA3B6A /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -306,6 +310,22 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		AF8943DE2D6B8654005D0E80 /* MockResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				AF8943DC2D6B8646005D0E80 /* CountriesModel+MockResponse.json */,
+			);
+			path = MockResponseModels;
+			sourceTree = "<group>";
+		};
+		AF8943DF2D6B878F005D0E80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF8943E02D6B87B5005D0E80 /* XCTestCase+Extesnsions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AF93AAB82D67562A00AA3B6A /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +443,8 @@
 		AFFEC8832D6B5B13004824FD /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				AF8943DF2D6B878F005D0E80 /* Extensions */,
+				AF8943DE2D6B8654005D0E80 /* MockResponseModels */,
 				AFFEC8802D6B5AE9004824FD /* MockNetworkService.swift */,
 				AF46B86E2D6B6E7800798D7E /* MockCountriesManager.swift */,
 			);
@@ -520,6 +542,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8943DD2D6B8646005D0E80 /* CountriesModel+MockResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +598,7 @@
 				AFFEC8852D6B5B9A004824FD /* NetworkServiceTests.swift in Sources */,
 				AF46B86F2D6B6E7800798D7E /* MockCountriesManager.swift in Sources */,
 				AFFEC8792D6B0730004824FD /* FavoriteListStorageTests.swift in Sources */,
+				AF8943E12D6B87B5005D0E80 /* XCTestCase+Extesnsions.swift in Sources */,
 				AF46B8712D6B6EE000798D7E /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

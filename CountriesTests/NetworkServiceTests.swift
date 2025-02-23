@@ -26,7 +26,10 @@ class NetworkServiceTests: XCTestCase {
     
     // Test with valid response
     func testRequestWithValidResponse() {
-        let jsonData = "{\"data\": []}".data(using: .utf8)!
+        guard let jsonData = loadJSONFromFile(name: "CountriesModel+MockResponse") else {
+            XCTFail("Failed to load JSON from file")
+            return
+        }
         mockSession.data = jsonData
         
         let expectation = self.expectation(description: "Valid response")
@@ -34,7 +37,12 @@ class NetworkServiceTests: XCTestCase {
         networkService.requestWithURLSession(url: "https://example.com", method: .get) { (result: Result<CountriesModel, NetworkErrors>) in
             switch result {
             case .success(let model):
-                XCTAssertNotNil(model.data)
+                XCTAssertEqual(model.data.count, 2) // 2 countries in the response
+                XCTAssertEqual(model.data.first?.name, "United States")
+                XCTAssertEqual(model.data.last?.name, "Turkey")
+                XCTAssertEqual(model.data.first?.currencyCodes, ["USD"])
+                XCTAssertEqual(model.data.last?.currencyCodes, ["TRY"])
+                XCTAssertNotNil(model.data.first?.wikiDataID)
                 expectation.fulfill()
             case .failure:
                 XCTFail("Expected success but got failure")
@@ -46,7 +54,7 @@ class NetworkServiceTests: XCTestCase {
     
     // Test with error
     func testRequestWithError() {
-        mockSession.error = NSError(domain: "TestError", code: 0, userInfo: nil)
+        mockSession.error = NetworkErrors.generalError
         
         let expectation = self.expectation(description: "Error response")
         
