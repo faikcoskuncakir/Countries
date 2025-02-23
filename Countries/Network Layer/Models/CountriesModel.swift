@@ -26,11 +26,11 @@ struct Country: Codable, Identifiable, Equatable {
         return lhs.code == rhs.code
     }
     
-    init() {
-        self.code = ""
-        self.currencyCodes = []
-        self.name = ""
-        self.wikiDataID = ""
+    init(code: String = "", currencyCodes: [String] = [], name: String = "", wikiDataID: String = "") {
+        self.code = code
+        self.currencyCodes = currencyCodes
+        self.name = name
+        self.wikiDataID = wikiDataID
         self.id = UUID()
     }
 }

@@ -9,27 +9,27 @@ import Foundation
 
 class FavoriteListStorage {
     
-    let countryKey = "country"
+    private let userDefaults: UserDefaults
+    private let countryKey = "country"
     
-    /// Retrieves favorite list from User Defaults
+    init(userDefaults: UserDefaults = .standard) {
+        self.userDefaults = userDefaults
+    }
+    
     func getFavoriteList() -> [Country] {
-        
-        if let country = UserDefaults.standard.object(forKey: countryKey) as? Data {
+        if let country = userDefaults.object(forKey: countryKey) as? Data {
             let decoder = JSONDecoder()
             if let loadedCountry = try? decoder.decode([Country].self, from: country) {
                 return loadedCountry
             }
         }
-        return [Country]()
+        return []
     }
     
-    /// Sets favorites to the Use Defaults
     func setFavoriteList(countryList: [Country]) {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(countryList) {
-            let defaults = UserDefaults.standard
-            defaults.set(encoded, forKey: countryKey)
+            userDefaults.set(encoded, forKey: countryKey)
         }
     }
-    
 }
