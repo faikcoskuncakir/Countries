@@ -44,6 +44,8 @@
 		AFFEC86F2D6A276B004824FD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86E2D6A276B004824FD /* LocationManager.swift */; };
 		AFFEC8712D6A3E90004824FD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC8702D6A3E90004824FD /* ProfileViewModel.swift */; };
 		AFFEC8792D6B0730004824FD /* FavoriteListStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC8782D6B0730004824FD /* FavoriteListStorageTests.swift */; };
+		AFFEC8812D6B5AE9004824FD /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC8802D6B5AE9004824FD /* MockNetworkService.swift */; };
+		AFFEC8852D6B5B9A004824FD /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC8842D6B5B9A004824FD /* NetworkServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		AFFEC8702D6A3E90004824FD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		AFFEC8762D6B0730004824FD /* CountriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFEC8782D6B0730004824FD /* FavoriteListStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListStorageTests.swift; sourceTree = "<group>"; };
+		AFFEC8802D6B5AE9004824FD /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		AFFEC8842D6B5B9A004824FD /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,9 +405,19 @@
 		AFFEC8772D6B0730004824FD /* CountriesTests */ = {
 			isa = PBXGroup;
 			children = (
+				AFFEC8832D6B5B13004824FD /* Mocks */,
 				AFFEC8782D6B0730004824FD /* FavoriteListStorageTests.swift */,
+				AFFEC8842D6B5B9A004824FD /* NetworkServiceTests.swift */,
 			);
 			path = CountriesTests;
+			sourceTree = "<group>";
+		};
+		AFFEC8832D6B5B13004824FD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AFFEC8802D6B5AE9004824FD /* MockNetworkService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,6 +561,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFEC8812D6B5AE9004824FD /* MockNetworkService.swift in Sources */,
+				AFFEC8852D6B5B9A004824FD /* NetworkServiceTests.swift in Sources */,
 				AFFEC8792D6B0730004824FD /* FavoriteListStorageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
