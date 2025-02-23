@@ -15,7 +15,6 @@ class CountriesManagerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Mock URLSession oluşturuluyor
         mockSession = MockURLSession()
         countriesManager = CountriesManager()
     }
@@ -27,34 +26,23 @@ class CountriesManagerTests: XCTestCase {
     }
     
     func testGetAllCountriesSuccess() {
-        // Test için mock data hazırlıyoruz
-        let jsonString = """
-        {
-            "data": [
-                {
-                    "code": "US",
-                    "currencyCodes": ["USD"],
-                    "name": "United States",
-                    "wikiDataId": "Q30"
-                }
-            ]
+        guard let jsonData = loadJSONFromFile(name: "CountriesModel+MockResponse") else {
+            XCTFail("Failed to load JSON from file")
+            return
         }
-        """
-        let jsonData = jsonString.data(using: .utf8)
         mockSession.data = jsonData
         mockSession.error = nil
         
-        // Testi çalıştırıyoruz
         countriesManager.getAllCountries { countries, error in
             XCTAssertNotNil(countries)
-            XCTAssertEqual(countries?.count, 1)
+            XCTAssertEqual(countries?.count, 2)
             XCTAssertEqual(countries?.first?.name, "United States")
+            XCTAssertEqual(countries?.last?.name, "Turkey")
             XCTAssertNil(error)
         }
     }
     
     func testGetAllCountriesFailure() {
-        // Hata durumunu simüle ediyoruz
         mockSession.data = nil
         mockSession.error = NSError(domain: "NetworkError", code: 1, userInfo: nil)
         
