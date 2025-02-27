@@ -11,17 +11,15 @@ import XCTest
 final class FavoriteListStorageTests: XCTestCase {
     
     var storage: FavoriteListStorage!
-    var mockUserDefaults: UserDefaults!
+    var mockUserDefaults: MockUserDefaults!
     
     override func setUp() {
         super.setUp()
-        mockUserDefaults = UserDefaults(suiteName: "testSuite")
-        mockUserDefaults.removePersistentDomain(forName: "testSuite")
+        mockUserDefaults = MockUserDefaults()
         storage = FavoriteListStorage(userDefaults: mockUserDefaults)
     }
     
     override func tearDown() {
-        mockUserDefaults.removePersistentDomain(forName: "testSuite")
         mockUserDefaults = nil
         storage = nil
         super.tearDown()
@@ -46,4 +44,3 @@ final class FavoriteListStorageTests: XCTestCase {
         XCTAssertTrue(retrievedCountries.isEmpty, "Favorite list should be empty if no data is set")
     }
 }
-

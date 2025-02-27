@@ -48,6 +48,7 @@
 		AF93AAE32D69E18400AA3B6A /* TextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */; };
 		AF93AAE52D6A0C7100AA3B6A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAE42D6A0C7100AA3B6A /* WebView.swift */; };
 		AFD900802D7048680039AD93 /* WebViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9007F2D7048680039AD93 /* WebViewScreen.swift */; };
+		AFD900832D7052E90039AD93 /* MockUserDafults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD900822D7052E90039AD93 /* MockUserDafults.swift */; };
 		AFFEC86B2D6A26EC004824FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86A2D6A26EC004824FD /* ProfileView.swift */; };
 		AFFEC86D2D6A272C004824FD /* ProfileInfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86C2D6A272C004824FD /* ProfileInfoRowView.swift */; };
 		AFFEC86F2D6A276B004824FD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86E2D6A276B004824FD /* LocationManager.swift */; };
@@ -113,6 +114,7 @@
 		AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModel.swift; sourceTree = "<group>"; };
 		AF93AAE42D6A0C7100AA3B6A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		AFD9007F2D7048680039AD93 /* WebViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewScreen.swift; sourceTree = "<group>"; };
+		AFD900822D7052E90039AD93 /* MockUserDafults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDafults.swift; sourceTree = "<group>"; };
 		AFFEC86A2D6A26EC004824FD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AFFEC86C2D6A272C004824FD /* ProfileInfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoRowView.swift; sourceTree = "<group>"; };
 		AFFEC86E2D6A276B004824FD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 		AFFEC8832D6B5B13004824FD /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				AFD900822D7052E90039AD93 /* MockUserDafults.swift */,
 				AFFEC8802D6B5AE9004824FD /* MockNetworkService.swift */,
 				AF46B86E2D6B6E7800798D7E /* MockCountriesManager.swift */,
 				AF8943E22D6BA6A1005D0E80 /* MockCountryDetailManager.swift */,
@@ -619,6 +622,7 @@
 				AFFEC8812D6B5AE9004824FD /* MockNetworkService.swift in Sources */,
 				AFFEC8852D6B5B9A004824FD /* NetworkServiceTests.swift in Sources */,
 				AF46B86F2D6B6E7800798D7E /* MockCountriesManager.swift in Sources */,
+				AFD900832D7052E90039AD93 /* MockUserDafults.swift in Sources */,
 				AFFEC8792D6B0730004824FD /* FavoriteListStorageTests.swift in Sources */,
 				AF8943E32D6BA6A1005D0E80 /* MockCountryDetailManager.swift in Sources */,
 				AF8943E52D6BA6D8005D0E80 /* CountryDetailManagerTests.swift in Sources */,
