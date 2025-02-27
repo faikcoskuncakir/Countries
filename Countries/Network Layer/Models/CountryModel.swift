@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CountryModel: Codable { // JSON model of a specific country
+struct CountryModel: Codable {
     var country: DataStruct
 
     enum CodingKeys: String, CodingKey {

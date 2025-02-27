@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CountriesModel: Codable { // JSON model of all countries
+struct CountriesModel: Codable {
     let data: [Country]
 }
 

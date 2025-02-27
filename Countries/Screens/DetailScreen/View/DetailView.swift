@@ -10,10 +10,10 @@ import SwiftUI
 struct DetailView: View {
     
     @EnvironmentObject var favoriteListHelper: FavoriteListHelper
-    @StateObject private var viewModel: DetailViewModel // @ObservedObject yerine @StateObject kullan
+    @StateObject private var viewModel: DetailViewModel
 
     init(viewModel: DetailViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel) // Burada @StateObject olarak başlatıyoruz
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {

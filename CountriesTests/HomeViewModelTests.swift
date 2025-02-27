@@ -41,14 +41,11 @@ class HomeViewModelTests: XCTestCase {
     }
     
     func testFetchCountriesFailure() {
-        // Hata durumunu simüle ediyoruz
         mockCountriesManager.mockCountries = nil
         mockCountriesManager.mockError = "Error fetching countries"
         
-        // Act
         viewModel.fetchCountries()
         
-        // Assert
         XCTAssertTrue(viewModel.showAlert)
         XCTAssertTrue(viewModel.countries.isEmpty)
     }
