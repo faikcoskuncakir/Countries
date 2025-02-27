@@ -31,8 +31,8 @@ struct TextView: View {
                 showWebView = true
             }
         }
-        .sheet(isPresented: $showWebView) {
-            WebView(url: viewModel.getWikiURL()!)
+        .fullScreenCover(isPresented: $showWebView) {
+            WebViewScreen(url: viewModel.getWikiURL()!)
         }
     }
 }

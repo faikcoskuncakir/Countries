@@ -47,6 +47,7 @@
 		AF93AAE02D69DFAA00AA3B6A /* StarButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AADF2D69DFAA00AA3B6A /* StarButtonViewModel.swift */; };
 		AF93AAE32D69E18400AA3B6A /* TextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */; };
 		AF93AAE52D6A0C7100AA3B6A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93AAE42D6A0C7100AA3B6A /* WebView.swift */; };
+		AFD900802D7048680039AD93 /* WebViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9007F2D7048680039AD93 /* WebViewScreen.swift */; };
 		AFFEC86B2D6A26EC004824FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86A2D6A26EC004824FD /* ProfileView.swift */; };
 		AFFEC86D2D6A272C004824FD /* ProfileInfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86C2D6A272C004824FD /* ProfileInfoRowView.swift */; };
 		AFFEC86F2D6A276B004824FD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC86E2D6A276B004824FD /* LocationManager.swift */; };
@@ -111,6 +112,7 @@
 		AF93AADF2D69DFAA00AA3B6A /* StarButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButtonViewModel.swift; sourceTree = "<group>"; };
 		AF93AAE22D69E18400AA3B6A /* TextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModel.swift; sourceTree = "<group>"; };
 		AF93AAE42D6A0C7100AA3B6A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		AFD9007F2D7048680039AD93 /* WebViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewScreen.swift; sourceTree = "<group>"; };
 		AFFEC86A2D6A26EC004824FD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AFFEC86C2D6A272C004824FD /* ProfileInfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoRowView.swift; sourceTree = "<group>"; };
 		AFFEC86E2D6A276B004824FD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -192,7 +194,7 @@
 				20F4208D2914CB0B00FFFA0A /* FavoriteScreen */,
 				20F4208C2914CAF700FFFA0A /* DetailScreen */,
 				AFFEC8672D6A26A4004824FD /* ProfileScreen */,
-				AF93AAE42D6A0C7100AA3B6A /* WebView.swift */,
+				AFD900812D70495D0039AD93 /* WebViewScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -410,6 +412,15 @@
 			path = TextView;
 			sourceTree = "<group>";
 		};
+		AFD900812D70495D0039AD93 /* WebViewScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AFD9007F2D7048680039AD93 /* WebViewScreen.swift */,
+				AF93AAE42D6A0C7100AA3B6A /* WebView.swift */,
+			);
+			path = WebViewScreen;
+			sourceTree = "<group>";
+		};
 		AFFEC8672D6A26A4004824FD /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +595,7 @@
 				AFFEC8712D6A3E90004824FD /* ProfileViewModel.swift in Sources */,
 				AF93AAC32D675C7100AA3B6A /* CountryDetailManager.swift in Sources */,
 				20F420A42914CC6F00FFFA0A /* DetailViewModel.swift in Sources */,
+				AFD900802D7048680039AD93 /* WebViewScreen.swift in Sources */,
 				AF93AABB2D675A2C00AA3B6A /* NetworkHelper.swift in Sources */,
 				AF93AAE52D6A0C7100AA3B6A /* WebView.swift in Sources */,
 				20F4207C2914CA7000FFFA0A /* CountriesApp.swift in Sources */,
