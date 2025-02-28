@@ -24,7 +24,6 @@ class NetworkServiceTests: XCTestCase {
         super.tearDown()
     }
     
-    // Test with valid response
     func testRequestWithValidResponse() {
         guard let jsonData = loadJSONFromFile(name: "CountriesModel+MockResponse") else {
             XCTFail("Failed to load JSON from file")
@@ -37,7 +36,7 @@ class NetworkServiceTests: XCTestCase {
         networkService.requestWithURLSession(url: "https://example.com", method: .get) { (result: Result<CountriesModel, NetworkErrors>) in
             switch result {
             case .success(let model):
-                XCTAssertEqual(model.data.count, 2) // 2 countries in the response
+                XCTAssertEqual(model.data.count, 2)
                 XCTAssertEqual(model.data.first?.name, "United States")
                 XCTAssertEqual(model.data.last?.name, "Turkey")
                 XCTAssertEqual(model.data.first?.currencyCodes, ["USD"])
@@ -52,7 +51,6 @@ class NetworkServiceTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
-    // Test with error
     func testRequestWithError() {
         mockSession.error = NetworkErrors.generalError
         
@@ -71,7 +69,6 @@ class NetworkServiceTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
-    // Test with invalid URL
     func testRequestWithInvalidURL() {
         mockSession.error = NetworkErrors.invalidURL
         
@@ -90,7 +87,6 @@ class NetworkServiceTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
-    // Test with invalid data (invalid JSON)
     func testRequestWithInvalidData() {
         let invalidJsonData = "{\"invalid\": \"json\"}".data(using: .utf8)!
         mockSession.data = invalidJsonData
@@ -110,9 +106,8 @@ class NetworkServiceTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
-    // Test with empty data
     func testRequestWithEmptyData() {
-        mockSession.data = Data() // Empty data
+        mockSession.data = Data()
         
         let expectation = self.expectation(description: "Empty data response")
         
