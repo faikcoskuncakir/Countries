@@ -9,10 +9,10 @@ import Foundation
 
 class FavoriteListStorage {
     
-    private let userDefaults: UserDefaults
+    private let userDefaults: UserDefaultsProtocol
     private let countryKey = "country"
     
-    init(userDefaults: UserDefaults = .standard) {
+    init(userDefaults: UserDefaultsProtocol = UserDefaults.standard) {
         self.userDefaults = userDefaults
     }
     
