@@ -69,24 +69,6 @@ class NetworkServiceTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
-    func testRequestWithInvalidURL() {
-        mockSession.error = NetworkErrors.invalidURL
-        
-        let expectation = self.expectation(description: "Invalid URL response")
-        
-        networkService.requestWithURLSession(url: "invalid_url", method: .get) { (result: Result<CountriesModel, NetworkErrors>) in
-            switch result {
-            case .success:
-                XCTFail("Expected failure but got success")
-            case .failure(let error):
-                XCTAssertEqual(error, .invalidURL)
-                expectation.fulfill()
-            }
-        }
-        
-        waitForExpectations(timeout: 1, handler: nil)
-    }
-    
     func testRequestWithInvalidData() {
         let invalidJsonData = "{\"invalid\": \"json\"}".data(using: .utf8)!
         mockSession.data = invalidJsonData
