@@ -13,20 +13,12 @@ class MockURLSession: URLSessionProtocol {
     var response: URLResponse?
     var error: Error?
 
-    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         if let error = error {
             completionHandler(nil, nil, error as NSError)
         } else {
             completionHandler(data, nil, nil)
         }
-        return MockURLSessionDataTask(resumeHandler: {})
-    }
-}
-
-struct MockURLSessionDataTask: URLSessionDataTaskProtocol {
-    var resumeHandler: (() -> Void)?
-    
-    func resume() {
-        resumeHandler?()
+        return URLSession.shared.dataTask(with: request)
     }
 }
