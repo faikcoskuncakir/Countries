@@ -21,9 +21,13 @@ class HomeViewModel: ObservableObject {
     func fetchCountries() {
         countriesManager.getAllCountries { allCountries, error in
             if (error != nil) {
-                self.showAlert = true
+                DispatchQueue.main.async {
+                    self.showAlert = true
+                }
             }
-            self.countries = allCountries ?? [Country]()
+            DispatchQueue.main.async {
+                self.countries = allCountries ?? [Country]()
+            }
         }
     }
     
